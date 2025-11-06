@@ -1,0 +1,27 @@
+services:
+  chormadb:
+    image: chromadb/chroma
+    volumes:
+      - chroma_data:/data
+    ports:
+      - "8000:8000"
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    restart: unless-stopped
+    entrypoint: [ "/bin/sh", "-c" ]
+    command: >
+      "ollama serve & 
+       sleep 5 &&
+       ollama run mistral &&
+       tail -f /dev/null"
+      
+
+volumes:
+  chroma_data:
+  ollama-data:
