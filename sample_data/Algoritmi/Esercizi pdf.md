@@ -1,0 +1,5 @@
+![[Esercizi algoritmi di ordinamento]]
+![[Esercizi algoritmi di ricerca]]
+![[Esercizi programmazione iterata agli oggetti]]
+![[Esercizi strutture dati avanzate]]
+![[Esercizi esame]]
