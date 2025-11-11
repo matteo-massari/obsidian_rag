@@ -17,9 +17,9 @@ ENV/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-.DS_Store
 
 # Docker
 *.env
 .docker/
+
 .DS_Store
